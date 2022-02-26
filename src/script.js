@@ -57,6 +57,7 @@ function search(event) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
   }
   let apiKey = "5c0aefa925435060c9aa64ae53efe973";
   let cityName = cityInput.value;
