@@ -44,10 +44,8 @@ function search(event) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = cityInput.value;
   function showTemperature(response) {
-    let temperature = Math.round(response.data.main.temp);
-    let temperatureMessage = `${temperature}`;
     let degreeNumber = document.querySelector("#degree-number");
-    degreeNumber.innerHTML = temperatureMessage;
+    degreeNumber.innerHTML = Math.round(response.data.main.temp);
     let descriptionElement = document.querySelector("#weather-description");
     descriptionElement.innerHTML = response.data.weather[0].description;
     let minElement = document.querySelector("#min-temp");
