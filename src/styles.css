@@ -29,8 +29,10 @@ button {
   background: #efebf1;
 }
 
-.card-body {
+.card {
   background-color: transparent;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .line {
