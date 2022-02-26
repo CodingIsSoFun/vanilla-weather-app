@@ -52,6 +52,11 @@ function search(event) {
     minElement.innerHTML = Math.round(response.data.main.temp_min);
     let maxElement = document.querySelector("#max-temp");
     maxElement.innerHTML = Math.round(response.data.main.temp_max);
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/10d@2x.png`
+    );
   }
   let apiKey = "5c0aefa925435060c9aa64ae53efe973";
   let cityName = cityInput.value;

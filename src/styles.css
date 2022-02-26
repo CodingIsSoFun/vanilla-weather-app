@@ -45,6 +45,11 @@ button {
   font-weight: bolder;
   color: #8064e9;
 }
+#icon {
+  margin: 0 auto;
+  display: block;
+}
+
 .degrees {
   text-align: center;
   color: #8064e9;
