@@ -24,72 +24,78 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <script src="src/script.js"></script>
     <div class="container">
-      <div class="card-img-overlay">
-        <div class="card">
-          <div class="card-body">
-            <form id="search-form">
-              <input
-                type="text"
-                placeholder="Search for a city"
-                autocomplete="off"
-                autofocus="on"
-                id="search-city-input"
-              />
-              <input type="submit" value="Search" />
-            </form>
-            <button>Current Location</button>
-            <h1>City Name</h1>
-            <h2></h2>
-            <p class="degrees" id="degree-number">°C</p>
-            <hr class="line" />
-            <p class="description">sunny/cloudy</p>
-            <p class="temperature">min./max.</p>
-            <div class="row align-items-center">
-              <div class="col">
-                <div class="card border-dark mb-3" style="max-width: 10rem">
-                  <div class="card-header">Monday</div>
-                  <div class="card-body text-dark">
-                    <i class="fas fa-temperature-low"></i>
-                    <i class="far fa-snowflake"></i>
-                    <p class="card-text">min./max.</p>
+      <div class="card bg-dark text-white">
+        <img
+          src="images/weather-background.jpg"
+          class="card-img"
+          alt="weather"
+        />
+        <div class="card-img-overlay">
+          <div class="card">
+            <div class="card-body">
+              <form id="search-form">
+                <input
+                  type="text"
+                  placeholder="Search for a city"
+                  autocomplete="off"
+                  autofocus="on"
+                  id="search-city-input"
+                />
+                <input type="submit" value="Search" />
+              </form>
+              <button>Current Location</button>
+              <h1>City Name</h1>
+              <h2></h2>
+              <p class="degrees" id="degree-number">°C</p>
+              <hr class="line" />
+              <p class="description">sunny/cloudy</p>
+              <p class="temperature">min./max.</p>
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="card border-dark mb-3" style="max-width: 10rem">
+                    <div class="card-header">Monday</div>
+                    <div class="card-body text-dark">
+                      <i class="fas fa-temperature-low"></i>
+                      <i class="far fa-snowflake"></i>
+                      <p class="card-text">min./max.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="card border-dark mb-3" style="max-width: 10rem">
-                  <div class="card-header">Tuesday</div>
-                  <div class="card-body text-dark">
-                    <i class="far fa-sun"></i>
-                    <p class="card-text">min./max.</p>
+                <div class="col">
+                  <div class="card border-dark mb-3" style="max-width: 10rem">
+                    <div class="card-header">Tuesday</div>
+                    <div class="card-body text-dark">
+                      <i class="far fa-sun"></i>
+                      <p class="card-text">min./max.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="card border-dark mb-3" style="max-width: 10rem">
-                  <div class="card-header">Wednesday</div>
-                  <div class="card-body text-dark">
-                    <i class="fas fa-cloud-sun"></i>
-                    <p class="card-text">min./max.</p>
+                <div class="col">
+                  <div class="card border-dark mb-3" style="max-width: 10rem">
+                    <div class="card-header">Wednesday</div>
+                    <div class="card-body text-dark">
+                      <i class="fas fa-cloud-sun"></i>
+                      <p class="card-text">min./max.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="card border-dark mb-3" style="max-width: 10rem">
-                  <div class="card-header">Thursday</div>
-                  <div class="card-body text-dark">
-                    <i class="fas fa-cloud-showers-heavy"></i>
-                    <p class="card-text">min./max.</p>
+                <div class="col">
+                  <div class="card border-dark mb-3" style="max-width: 10rem">
+                    <div class="card-header">Thursday</div>
+                    <div class="card-body text-dark">
+                      <i class="fas fa-cloud-showers-heavy"></i>
+                      <p class="card-text">min./max.</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="card border-dark mb-3" style="max-width: 10rem">
-                  <div class="card-header">Friday</div>
-                  <div class="card-body text-dark">
-                    <i class="fas fa-wind"></i>
-                    <p class="card-text">min./max.</p>
+                <div class="col">
+                  <div class="card border-dark mb-3" style="max-width: 10rem">
+                    <div class="card-header">Friday</div>
+                    <div class="card-body text-dark">
+                      <i class="fas fa-wind"></i>
+                      <p class="card-text">min./max.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -99,12 +105,11 @@
       </div>
       <footer>
         Designed &
-        <a href="https://github.com/CodingIsSoFun/vanilla-weather-app"
+        <a href="https://github.com/CodingIsSoFun/Weather_App"
           >open-source coded </a
-        >by Annette, hosted on
-        <a href="https://nifty-archimedes-438e54.netlify.app/">netlify</a>
+        >by Annette
       </footer>
     </div>
-</div>
+    <script src="src/script.js"></script>
   </body>
 </html>
