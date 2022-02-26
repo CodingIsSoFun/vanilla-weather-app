@@ -42,10 +42,12 @@
               <button>Current Location</button>
               <h1>City Name</h1>
               <h2></h2>
-              <p class="degrees" id="degree-number">°C</p>
+              <p class="degrees"><span id="degree-number"></span>°C|°F</p>
               <hr class="line" />
-              <p class="description">sunny/cloudy</p>
-              <p class="temperature">min./max.</p>
+              <p class="description" id="weather-description"></p>
+              <p class="temperature">
+                <span id="min-temp">min./</span>/<span id="max-temp">max.</span>
+              </p>
               <div class="row align-items-center">
                 <div class="col">
                   <div class="card border-dark mb-3" style="max-width: 10rem">

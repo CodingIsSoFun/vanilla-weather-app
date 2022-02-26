@@ -45,9 +45,15 @@ function search(event) {
   h1.innerHTML = cityInput.value;
   function showTemperature(response) {
     let temperature = Math.round(response.data.main.temp);
-    let temperatureMessage = `${temperature}°C`;
+    let temperatureMessage = `${temperature}`;
     let degreeNumber = document.querySelector("#degree-number");
     degreeNumber.innerHTML = temperatureMessage;
+    let descriptionElement = document.querySelector("#weather-description");
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    let minElement = document.querySelector("#min-temp");
+    minElement.innerHTML = Math.round(response.data.main.temp_min);
+    let maxElement = document.querySelector("#max-temp");
+    maxElement.innerHTML = Math.round(response.data.main.temp_max);
   }
   let apiKey = "5c0aefa925435060c9aa64ae53efe973";
   let cityName = cityInput.value;
