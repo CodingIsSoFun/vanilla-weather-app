@@ -1,0 +1,72 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  line-height: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 60px;
+  color: #272044;
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #8064e9;
+  padding: 20px 0 0;
+}
+
+button {
+  margin: 50px auto;
+  padding: 5px 5px;
+  border-radius: 100px;
+  background: #efebf1;
+}
+
+.card-body {
+  background-color: transparent;
+}
+
+.line {
+  color: black;
+}
+
+#degree-number {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bolder;
+  color: #8064e9;
+}
+.degrees {
+  text-align: center;
+  color: #8064e9;
+  margin: 0 0 0 24px;
+}
+.description {
+  text-align: center;
+  color: #073022;
+  padding: 0 0 0 20px;
+}
+.temperature {
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  text-align: center;
+  color: #073022;
+  padding: 0 0 24px;
+}
+
+.col {
+  margin: 30px;
+}
+
+.row.align-items-center {
+  text-align: center;
+  color: black;
+  align-items: center;
+}
