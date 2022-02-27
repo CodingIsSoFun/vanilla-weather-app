@@ -5,7 +5,7 @@ function checkTime(i) {
   }
   return i;
 }
-let h2 = document.querySelector("h2");
+let h1 = document.querySelector("h1");
 let date = now.getDate();
 let hours = now.getHours();
 let minutes = checkTime(now.getMinutes());
@@ -35,13 +35,13 @@ let months = [
   "December",
 ];
 let month = months[now.getMonth()];
-h2.innerHTML = `${day} | ${date} ${month} ${year} | ${hours}:${minutes}`;
+h1.innerHTML = `Last updated: ${day} | ${date} ${month} ${year} | ${hours}:${minutes}`;
 
 function search(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-city-input");
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = cityInput.value;
+  let h2 = document.querySelector("h2");
+  h2.innerHTML = cityInput.value;
   function showTemperature(response) {
     let degreeNumber = document.querySelector("#degree-number");
     celsiusTemperature = response.data.main.temp;
@@ -80,8 +80,8 @@ function getCurrentPosition() {
       let temperatureMessage = `${temperature}°C`;
       let degreeNumber = document.querySelector("#degree-number");
       degreeNumber.innerHTML = temperatureMessage;
-      let h1 = document.querySelector("h1");
-      h1.innerHTML = response.data.name;
+      let h2 = document.querySelector("h2");
+      h2.innerHTML = response.data.name;
     }
   }
 }
