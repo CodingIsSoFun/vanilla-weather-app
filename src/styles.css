@@ -40,21 +40,20 @@ button {
   color: black;
 }
 
-#degree-number {
-  text-align: center;
-  font-size: 28px;
-  color: #8064e9;
-}
-#icon {
-  margin: 0 auto;
-  display: block;
-}
-
 .degrees {
   text-align: center;
   color: #8064e9;
   margin: 0 0 0 24px;
 }
+.degrees .active {
+  color: #8064e9;
+  cursor: default;
+  text-decoration: none;
+}
+.degrees .active:hover {
+  text-decoration: none;
+}
+
 .description {
   text-align: center;
   color: #073022;
@@ -76,4 +75,14 @@ button {
   text-align: center;
   color: black;
   align-items: center;
+}
+
+#degree-number {
+  text-align: center;
+  font-size: 28px;
+  color: #8064e9;
+}
+#icon {
+  margin: 0 auto;
+  display: block;
 }
