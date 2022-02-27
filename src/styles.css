@@ -79,6 +79,12 @@ footer {
   align-items: center;
 }
 
+.wind-speed {
+  text-align: center;
+  color: #8064e9;
+  margin: 0 0 0 24px;
+}
+
 #degree-number {
   text-align: center;
   font-size: 28px;

@@ -58,6 +58,8 @@ function search(event) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
+    let windSpeed = document.querySelector("#windy");
+    windSpeed.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
   }
   let apiKey = "5c0aefa925435060c9aa64ae53efe973";
   let cityName = cityInput.value;
