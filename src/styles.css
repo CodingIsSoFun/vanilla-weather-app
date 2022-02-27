@@ -35,7 +35,7 @@ footer {
 
 .card {
   background-color: transparent;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -70,7 +70,7 @@ footer {
 }
 
 .col {
-  margin: 30px;
+  margin: 25px auto;
 }
 
 .row.align-items-center {
