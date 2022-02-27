@@ -30,6 +30,7 @@ button {
 }
 
 footer {
+  font-size: 10px;
   color: black;
 }
 
@@ -37,6 +38,13 @@ footer {
   background-color: transparent;
   max-width: 1000px;
   margin: 0 auto;
+}
+.card-header {
+  text-align: center;
+  color: black;
+}
+.card-text {
+  text-align: center;
 }
 
 .line {
@@ -69,11 +77,11 @@ footer {
   color: #073022;
 }
 
-.col {
-  margin: 25px auto;
+.col-2 {
+  margin-top: 25px;
 }
 
-.row.align-items-center {
+.row {
   text-align: center;
   color: black;
   align-items: center;
