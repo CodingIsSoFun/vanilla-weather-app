@@ -37,7 +37,6 @@ let months = [
 let month = months[now.getMonth()];
 h2.innerHTML = `${day} | ${date} ${month} ${year} | ${hours}:${minutes}`;
 
-let form = document.querySelector("#search-form");
 function search(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-city-input");
@@ -64,6 +63,7 @@ function search(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function getCurrentPosition() {
@@ -86,3 +86,12 @@ function getCurrentPosition() {
 }
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let fahrenheitNumber = document.querySelector("#degree-number");
+  fahrenheitNumber.innerHTML = Math.round(fahrenheitTemperature);
+}
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheit);
