@@ -40,12 +40,14 @@ h1.innerHTML = `Last updated: ${day} | ${date} ${month} ${year} | ${hours}:${min
 function showForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
   <div class="col-2">
   <div class="card border-dark mb-2" max-width="100px">
-  <div class="card-header">Monday</div>
+  <div class="card-header">${day}</div>
   <p class="card-text">
    <img src="" id="icon" alt="clear" />
   <span class="weather-temp-min">min </span><span class="weather-temp-max">/max.</span>
@@ -53,19 +55,7 @@ function showForecast() {
   </div>
   </div>
   `;
-  forecastHTML =
-    forecastHTML +
-    `
-  <div class="col-2">
-  <div class="card border-dark mb-2" max-width="100px">
-  <div class="card-header">Monday</div>
-  <p class="card-text">
-   <img src="" id="icon" alt="clear" />
-  <span class="weather-temp-min">min </span><span class="weather-temp-max">/max.</span>
-  </p>
-  </div>
-  </div>
-  `;
+  });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
