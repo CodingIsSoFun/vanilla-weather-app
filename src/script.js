@@ -44,7 +44,8 @@ function search(event) {
   h1.innerHTML = cityInput.value;
   function showTemperature(response) {
     let degreeNumber = document.querySelector("#degree-number");
-    degreeNumber.innerHTML = Math.round(response.data.main.temp);
+    celsiusTemperature = response.data.main.temp;
+    degreeNumber.innerHTML = Math.round(celsiusTemperature);
     let descriptionElement = document.querySelector("#weather-description");
     descriptionElement.innerHTML = response.data.weather[0].description;
     let minElement = document.querySelector("#min-temp");
@@ -89,9 +90,12 @@ button.addEventListener("click", getCurrentPosition);
 
 function showFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let fahrenheitNumber = document.querySelector("#degree-number");
   fahrenheitNumber.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+let celsiusTemperature = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
