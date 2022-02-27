@@ -11,12 +11,12 @@ h2 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 16px;
   color: #8064e9;
   padding: 20px 0 0;
 }
 h2 {
-  margin-top: 60px;
+  margin-top: 30px;
   color: #272044;
   font-size: 34px;
   text-transform: capitalize;
@@ -29,9 +29,13 @@ button {
   background: #efebf1;
 }
 
+footer {
+  color: black;
+}
+
 .card {
   background-color: transparent;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -59,11 +63,10 @@ button {
   padding: 0 0 0 20px;
 }
 .temperature {
-  font-family: "Raleway", sans-serif;
   font-style: italic;
+  margin: 0 auto;
   text-align: center;
   color: #073022;
-  padding: 0 0 24px;
 }
 
 .col {
