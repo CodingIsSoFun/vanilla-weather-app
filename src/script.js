@@ -37,6 +37,22 @@ let months = [
 let month = months[now.getMonth()];
 h1.innerHTML = `Last updated: ${day} | ${date} ${month} ${year} | ${hours}:${minutes}`;
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `<div class="row">
+  <div class="col-2">
+  <div class="card border-dark mb-2" max-width="100px">
+  <div class="card-header">Monday</div>
+  <p class="card-text">
+   <img src="" id="icon" alt="clear" />
+  <span class="weather-temp-min">min </span><span class="weather-temp-max">/max.</span>
+  </p>
+  </div>
+  </div>
+  </div>`;
+}
+showForecast();
+
 function search(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-city-input");
