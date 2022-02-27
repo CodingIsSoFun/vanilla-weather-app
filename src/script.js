@@ -94,8 +94,15 @@ function showFahrenheit(event) {
   let fahrenheitNumber = document.querySelector("#degree-number");
   fahrenheitNumber.innerHTML = Math.round(fahrenheitTemperature);
 }
+function showCelsius(event) {
+  event.preventDefault();
+  let celsiusNumber = document.querySelector("#degree-number");
+  celsiusNumber.innerHTML = Math.round(celsiusTemperature);
+}
 
 let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsius);
