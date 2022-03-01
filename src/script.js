@@ -37,30 +37,6 @@ let months = [
 let month = months[now.getMonth()];
 h1.innerHTML = `Last updated: ${day} | ${date} ${month} ${year} | ${hours}:${minutes}`;
 
-function showForecast() {
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-  <div class="col-2">
-  <div class="card border-dark mb-2" max-width="100px">
-  <div class="card-header">${day}</div>
-  <p class="card-text">
-   <img src="" id="icon" alt="clear" />
-  <span class="weather-temp-min">min </span><span class="weather-temp-max">/max.</span>
-  </p>
-  </div>
-  </div>
-  `;
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-showForecast();
-
 function search(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-city-input");
@@ -84,6 +60,7 @@ function search(event) {
     iconElement.setAttribute("alt", response.data.weather[0].description);
     let windSpeed = document.querySelector("#windy");
     windSpeed.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
+    getForecast(response.data.coord);
   }
   let apiKey = "5c0aefa925435060c9aa64ae53efe973";
   let cityName = cityInput.value;
@@ -92,6 +69,59 @@ function search(event) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
+
+function showForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+  <div class="col-2">
+  <div class="card border-dark mb-2" max-width="100px">
+  <div class="card-header">${formatDay(forecastDay.dt)}</div>
+  <p class="card-text">
+   <img src="http://openweathermap.org/img/wn/${
+     forecastDay.weather[0].icon
+   }@2x.png" alt="" />
+   </br>
+  <span class="weather-temp-min">${Math.round(
+    forecastDay.temp.min
+  )}° </span><span class="weather-temp-max">/${Math.round(
+          forecastDay.temp.max
+        )}°</span>
+  </p>
+  </div>
+  </div>
+  `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "5c0aefa925435060c9aa64ae53efe973";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+}
 
 function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(showPosition);
