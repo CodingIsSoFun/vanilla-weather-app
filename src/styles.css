@@ -37,9 +37,10 @@ button {
   transition: all 200ms ease-in-out;
 }
 .buttonSearch:hover {
-        background: rgb(180, 179, 179);
-        color: #ffff;
-        cursor: grab;
+  background: rgb(180, 179, 179);
+  color: #ffff;
+  cursor: grab;
+}
 
 footer {
   font-size: 10px;
@@ -51,11 +52,10 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
   display: block;
-  text-align: center;
 }
 
 .line {
-  color: ;
+  color: grey;
 }
 
 .degrees {
