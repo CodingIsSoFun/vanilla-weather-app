@@ -30,7 +30,7 @@ button {
 .buttonSearch {
   color: rgb(180, 179, 179);
   font-size: 15px;
-  padding: 10px 25px;
+  padding: 10px auto;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
   background-color: #ebe6f0 70%;
