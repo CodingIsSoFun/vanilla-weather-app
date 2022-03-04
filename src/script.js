@@ -59,7 +59,9 @@ function search(event) {
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
     let windSpeed = document.querySelector("#windy");
-    windSpeed.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
+    windSpeed.innerHTML = `Wind Speed: ${Math.round(
+      response.data.wind.speed
+    )} m/s`;
     getForecast(response.data.coord);
   }
   let apiKey = "5c0aefa925435060c9aa64ae53efe973";
