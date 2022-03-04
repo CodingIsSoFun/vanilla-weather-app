@@ -21,10 +21,14 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="card bg-dark text-white">
-        <div class="card-img-overlay">
-          <div class="card">
+    <div class="card mb-3" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="img/pexels-ian-beckley-2440061.jpg" class="img-fluid rounded-start" alt="clear">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+         <div class="card">
             <div class="card-body">
               <form id="search-form" class="mb-3">
                 <div class="row">
@@ -38,7 +42,7 @@
                       class="form-control"
                     />
                   </div>
-                  <div class="col-2">
+                  <div class="col-3">
                     <input
                       type="submit"
                       value="Search"
@@ -65,7 +69,7 @@
                 <span id="min-temp"></span>°C min./
                 <span id="max-temp"></span>°C max.
               </p>
-              <p class="wind-speed" id="windy">wind speed</p>
+              <p class="wind-speed" id="windy">Wind Speed</p>
               <div class="weather-forecast" id="forecast"></div>
           </div>
           <footer>
@@ -74,9 +78,11 @@
               >open-source coded </a
             >by Annette
           </footer>
-        </div>
       </div>
     </div>
+  </div>
+</div>
+         
     <script src="src/script.js"></script>
   </body>
 </html>

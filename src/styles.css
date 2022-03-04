@@ -23,10 +23,9 @@ h2 {
 }
 
 button {
-  margin: 0 auto;
   padding: 5px 5px;
-  border-radius: 100px;
-  background: #efebf1;
+  list-style: none;
+  border: none;
 }
 
 footer {
@@ -38,13 +37,6 @@ footer {
   background-color: transparent;
   max-width: 1000px;
   margin: 0 auto;
-}
-.card-header {
-  text-align: center;
-  color: black;
-}
-.card-text {
-  text-align: center;
 }
 
 .line {
@@ -77,12 +69,7 @@ footer {
   color: #073022;
 }
 
-.col-2 {
-  margin-top: 25px;
-}
-
 .row {
-  text-align: center;
   color: black;
   align-items: center;
 }
