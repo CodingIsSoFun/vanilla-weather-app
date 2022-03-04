@@ -2,11 +2,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-h1,
-h2 {
-  margin: 0;
-}
-
 h1 {
   color: rgb(97, 93, 93);
   font-size: 15px;
@@ -32,6 +27,21 @@ button {
   background-color: rgb(180, 179, 179);
 }
 
+.buttonSearch {
+  color: white;
+  font-size: 18px;
+  padding: 10px 30px;
+  margin: 15px auto;
+  border: 5px solid #c4c4c4;
+  border-radius: 10px;
+  background-color: #ebe6f0;
+  transition: all 500ms ease-in-out;
+}
+.buttonSearch:hover {
+        background: rgb(180, 179, 179);
+        color: #ffff;
+        cursor: grab;
+
 footer {
   font-size: 10px;
   color: black;
@@ -41,6 +51,8 @@ footer {
   background-color: transparent;
   max-width: 1000px;
   margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 .line {
