@@ -27,24 +27,25 @@ button {
   background-color: rgb(180, 179, 179);
 }
 
-.buttonSearch {
-  color: rgb(180, 179, 179);
-  font-size: 15px;
-  padding: 10px auto;
-  border: 1px solid #c4c4c4;
-  border-radius: 10px;
-  background-color: #ebe6f0 70%;
-  transition: all 200ms ease-in-out;
-}
-.buttonSearch:hover {
-  background: rgb(180, 179, 179);
-  color: #ffff;
-  cursor: grab;
-}
-
 footer {
   font-size: 10px;
   color: black;
+}
+
+.buttonSearch {
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  background-color: rgba(90, 73, 94, 0.349);
+  transition: all 200ms ease-in-out;
+}
+
+.buttonSearch:hover {
+  background: rgb(180, 179, 179);
+  color: #ffff;
+  cursor: pointer;
 }
 
 .card {
@@ -60,47 +61,56 @@ footer {
 
 .degrees {
   text-align: center;
-  color: #8064e9;
-  margin: 0 0 0 24px;
+  color: rgb(94, 92, 92);
+  margin: 0 auto;
 }
-.degrees .active {
-  color: #8064e9;
+
+.active {
+  color: rgb(94, 92, 92);
   cursor: default;
   text-decoration: none;
 }
+
 .degrees .active:hover {
   text-decoration: none;
 }
 
 .description {
   text-align: center;
-  color: #073022;
-  padding: 0 0 0 20px;
-}
-.temperature {
-  font-style: italic;
-  margin: 0 auto;
-  text-align: center;
-  color: #073022;
+  color: rgb(138, 104, 148);
 }
 
-.row {
-  color: black;
-  align-items: center;
+.temperature {
+  font-style: italic;
+  color: rgb(94, 92, 92);
+  text-align: center;
+  margin: 0 auto;
 }
 
 .wind-speed {
   text-align: center;
-  color: #8064e9;
-  margin: 0 0 0 24px;
+  color: rgb(94, 92, 92);
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 #degree-number {
   text-align: center;
+  margin: 0 auto;
   font-size: 28px;
-  color: #8064e9;
+  color: rgb(94, 92, 92);
 }
+
 #icon {
   margin: 0 auto;
   display: block;
+}
+
+#fahrenheitLink {
+  text-decoration: none;
 }

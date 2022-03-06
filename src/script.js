@@ -90,25 +90,22 @@ function formatDay(timestamp) {
 function showForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row row-cols-4">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 4) {
       forecastHTML =
         forecastHTML +
         `
-  <div class="col-2">
-  <div class="card border-dark mb-2" max-width="100px">
+  <div class="col">
+  <div class="card border-dark text-center">
   <div class="card-header">${formatDay(forecastDay.dt)}</div>
   <p class="card-text">
    <img src="http://openweathermap.org/img/wn/${
      forecastDay.weather[0].icon
    }@2x.png" alt="" />
    </br>
-  <span class="weather-temp-min">${Math.round(
-    forecastDay.temp.min
-  )}° </span><span class="weather-temp-max">/${Math.round(
-          forecastDay.temp.max
-        )}°</span>
+   <span class="weather-temp-max">${Math.round(forecastDay.temp.max)}°</span>
+  <span class="weather-temp-min">/${Math.round(forecastDay.temp.min)}° </span>
   </p>
   </div>
   </div>
@@ -135,7 +132,7 @@ function getCurrentPosition() {
     axios.get(url).then(showWeather);
     function showWeather(response) {
       let temperature = Math.round(response.data.main.temp);
-      let temperatureMessage = `${temperature}°C`;
+      let temperatureMessage = `${temperature}`;
       let degreeNumber = document.querySelector("#degree-number");
       degreeNumber.innerHTML = temperatureMessage;
       let h2 = document.querySelector("h2");
