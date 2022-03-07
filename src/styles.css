@@ -34,8 +34,9 @@ footer {
 
 .buttonSearch {
   color: white;
+  text-align: center;
   font-size: 16px;
-  padding: 5px 10px;
+  padding: 5px 15px;
   border: 1px solid #c4c4c4;
   border-radius: 10px;
   background-color: rgba(90, 73, 94, 0.349);
@@ -85,6 +86,7 @@ footer {
   color: rgb(94, 92, 92);
   text-align: center;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
 .wind-speed {
@@ -99,20 +101,11 @@ footer {
   height: auto;
 }
 
-.box1,
-.box2 {
-  float: left;
-  width: 32%;
-  margin-right: 2%;
-  padding: 20px;
-  background: #eee;
-  box-sizing: border-box;
-}
-
 #degree-number {
   text-align: center;
   margin: 0 auto;
   font-size: 28px;
+  font-weight: 500;
   color: rgb(94, 92, 92);
 }
 
