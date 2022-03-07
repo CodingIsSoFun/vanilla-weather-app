@@ -99,6 +99,16 @@ footer {
   height: auto;
 }
 
+.box1,
+.box2 {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+  padding: 20px;
+  background: #eee;
+  box-sizing: border-box;
+}
+
 #degree-number {
   text-align: center;
   margin: 0 auto;
